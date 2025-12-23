@@ -1,0 +1,12 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<h2>Add Student</h2>
+<form method="post" enctype="multipart/form-data" action="{{ url_for('admin.student_new_post') }}">
+  <input name="registration_id" required placeholder="Registration ID">
+  <input name="full_name" required placeholder="Full Name">
+  <input name="official_email" type="email" required placeholder="Official Email">
+  <input name="images" type="file" multiple accept="image/*" required>
+  <p>Upload 5+ clear images (single face per image, different angles).</p>
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

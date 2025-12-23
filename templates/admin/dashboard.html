@@ -1,0 +1,10 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<p>Total Students: {{ total_students }}</p>
+<p>Present Today: {{ present }}</p>
+<p>Absent Today: {{ absent }}</p>
+<a href="{{ url_for('admin.students_list') }}">Manage Students</a> |
+<a href="{{ url_for('admin.attendance_view') }}">View Attendance</a> |
+<a href="{{ url_for('admin.export_csv') }}">Export CSV</a>
+{% endblock %}

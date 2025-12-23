@@ -1,0 +1,4 @@
+﻿body { font-family: Arial, sans-serif; margin: 20px; }
+ul li.success { color: green; } ul li.danger { color: red; } ul li.warning { color: orange; }
+table { border-collapse: collapse; width: 100%; }
+td, th { padding: 6px; }

@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>University Attendance</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/auth/login">Login</a> |
+    <a href="/auth/register">Register</a> |
+    <a href="/admin/dashboard">Admin</a> |
+    <a href="/student/dashboard">Student</a> |
+    <a href="/auth/logout">Logout</a>
+  </nav>
+</header>
+<main>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</main>
+</body>
+</html>

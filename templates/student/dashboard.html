@@ -1,0 +1,16 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<h2>My Attendance</h2>
+<p>Attendance %: {{ '%.2f'|format(pct) }}%</p>
+<table border="1">
+<tr><th>Date</th><th>Course</th><th>Status</th><th>Time In</th></tr>
+{% for r in records %}
+<tr>
+  <td>{{ r.date }}</td>
+  <td>{{ r.course_code }}</td>
+  <td>{{ r.status }}</td>
+  <td>{{ r.time_in }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

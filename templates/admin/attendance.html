@@ -1,0 +1,17 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<h2>Today's Attendance</h2>
+<table border="1">
+<tr><th>Reg ID</th><th>Date</th><th>Time In</th><th>Course</th><th>Camera</th><th>Status</th></tr>
+{% for a in rows %}
+<tr>
+  <td>{{ a.student.registration_id }}</td>
+  <td>{{ a.date }}</td>
+  <td>{{ a.time_in }}</td>
+  <td>{{ a.course_code }}</td>
+  <td>{{ a.camera_id }}</td>
+  <td>{{ a.status }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
